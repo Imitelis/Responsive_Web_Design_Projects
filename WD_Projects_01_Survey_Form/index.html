@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Survey Form</h1>
+        <p id="description" class="description text-center">
+          First Survey Form</p>
+      </header>
+      <form id="survey-form">
+
+        <div class="form-group">
+          <label id="name-label" for="name">Please enter your name:</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name here..." required>
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email here..." required>
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number">Please enter your age<span class="clue"> (optional)</span>:</label>
+          <input type="number" name="age" id="number" min="18" max="99" class="form-control" placeholder="18">
+        </div>
+
+        <div class="form-group">
+          <p>Which language would you rather study?</p>
+          <select id="dropdown" name="role" class="form-control" required="">
+            <option disabled="" selected="" value="">Select your language</option>
+            <option value="french">French</option>
+            <option value="arabic">Arabic</option>
+            <option value="russian">Russian</option>
+            <option value="chinese">Chinese</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>What is your preferred videogame platform?</p>
+          <label>
+            <input name="user-platform" value="nintendo" type="radio" class="input-radio" checked="">Nintendo</label>
+          <label>
+            <input name="user-platform" value="Xbox" type="radio" class="input-radio">Xbox</label>
+          <label><input name="user-platform" value="Playstation" type="radio" class="input-radio">Playstation</label>
+          <label><input name="user-platform" value="PC" type="radio" class="input-radio">PC</label>
+        </div>
+
+        <div class="form-group">
+          <p>What is your favorite season?</p>
+          <select id="most-like" name="mostliked" class="form-control" required>
+            <option disabled="" selected="" value>Select a Season</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+            <option value="winter">Winter</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What music is in your playlist?
+            <span class="clue">(Pick multiple if necessary)</span>
+          </p>
+
+          <label><input name="prefer" value="jazz-music" type="checkbox" class="input-checkbox">Jazz</label>
+          <label>
+            <input name="prefer" value="reggae-music" type="checkbox" class="input-checkbox">Reggae</label>
+          <label><input name="prefer" value="rock-music" type="checkbox" class="input-checkbox">Rock</label>
+          <label><input name="prefer" value="techno-music" type="checkbox" class="input-checkbox">Techno</label>
+          <label><input name="prefer" value="pop-music" type="checkbox" class="input-checkbox">Pop</label>
+          <label><input name="prefer" value="hip-hop-music" type="checkbox" class="input-checkbox">Hip-hop</label>
+          <label><input name="prefer" value="classical-music" type="checkbox" class="input-checkbox">Classical</label>
+          <label><input name="prefer" value="country-music" type="checkbox" class="input-checkbox">Country</label>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  
+
+</body></html>
