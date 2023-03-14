@@ -1,0 +1,104 @@
+a {
+  color: lightgreen;
+  border: 2px;
+}
+
+a:hover {
+  color: yellowgreen;
+}
+
+b {
+  color: yellowgreen;
+}
+
+header {
+  color: chartreuse;
+}
+
+.nav-link:hover {
+  color: lightgreen;
+}
+
+p, ul, ol {
+  color: green;
+}
+
+h2, h3, h4 {
+  color: darkgreen;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.code-box {
+  background-color: black;
+  color:limegreen;
+  border-radius: 2px;
+  width: 98%;
+  margin: auto;
+  position: relative;
+  padding: 2px 2px 2px 2px;
+}
+
+main {
+  background-color: grey;
+  top: 0;
+  padding-top: 0;
+  width: 80%;
+  left: 20%;
+  right: 0;
+  position: absolute;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 15px;
+  border-top: 4px forestgreen solid;
+  border-bottom: 4px forestgreen solid;
+}
+
+section {
+  width: 95%;
+  padding-top: 0;
+  padding-left: 25px;
+  padding-right: 15px;
+}
+
+#navbar {
+  background-color: dimgrey;
+  z-index: 1;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  border: 1px chartreuse solid;
+}
+
+#navbar a {
+  padding: 2px 2px 2px 2px;
+  position: static;
+  text-decoration: none;
+  font-size: 12px;
+  border: 1px lightgreen solid;
+  display: block;
+  transition: 0.3s;
+  width: 95%;
+  height: 5.75%;
+}
+
+#navbar a:hover {
+  background-color: lightgreen;
+  color: dimgrey;
+}
+
+@media screen and (max-height: 450px) {
+  #navbar {width: 10%;}
+  body {width: 90%}
+}
