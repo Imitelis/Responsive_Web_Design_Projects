@@ -78,6 +78,7 @@ section {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 0px;
+  border-right: solid;
   border: 1px chartreuse solid;
 }
 
@@ -91,6 +92,7 @@ section {
   transition: 0.3s;
   width: 95%;
   height: 5.75%;
+  cursor: pointer;
 }
 
 #navbar a:hover {
