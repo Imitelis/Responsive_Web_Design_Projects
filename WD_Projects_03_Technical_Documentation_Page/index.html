@@ -7,17 +7,19 @@
 <main id="main-doc">
 <nav id="navbar">
   <header><h1>Node.js Basics</h1></header>
-  <a class="nav-link" href="#Node.js_Home">Node.js Home</a>
-  <a class="nav-link" href="#Node.js_Intro">Node.js Intro</a>
-  <a class="nav-link" href="#Node.js_Get_Started">Node.js Get Started</a>
-  <a class="nav-link" href="#Node.js_Modules">Node.js Modules</a>
-  <a class="nav-link" href="#Node.js_HTTP_Module">Node.js HTTP Module</a>
-  <a class="nav-link" href="#Node.js_File_System_Module">Node.js File System Module</a>
-  <a class="nav-link" href="#Node.js_URL_Module">Node.js URL Module</a>
-  <a class="nav-link" href="#Node.js_NPM">Node.js NPM</a>
-  <a class="nav-link" href="#Node.js_Events">Node.js Events</a>
-  <a class="nav-link" href="#Node.js_Upload_Files">Node.js Upload Files</a>
-  <a class="nav-link" href="#Node.js_Send_an_Email">Node.js Send an Email</a>
+  <ul>
+    <li><a class="nav-link" href="#Node.js_Home">Node.js Home</a></li>
+    <li><a class="nav-link" href="#Node.js_Intro">Node.js Intro</a></li>
+    <li><a class="nav-link" href="#Node.js_Get_Started">Node.js Get Started</a></li>
+    <li><a class="nav-link" href="#Node.js_Modules">Node.js Modules</a><li>
+    <li><a class="nav-link" href="#Node.js_HTTP_Module">Node.js HTTP Module</a></li>
+    <li><a class="nav-link" href="#Node.js_File_System_Module">Node.js File System Module</a></li>
+    <li><a class="nav-link" href="#Node.js_URL_Module">Node.js URL Module</a></li>
+  <li><a class="nav-link" href="#Node.js_NPM">Node.js NPM</a></li>
+  <li><a class="nav-link" href="#Node.js_Events">Node.js Events</a></li>
+  <li><a class="nav-link" href="#Node.js_Upload_Files">Node.js Upload Files</a></li>
+  <li><a class="nav-link" href="#Node.js_Send_an_Email">Node.js Send an Email</a></li>
+  <ul>
 </nav>
 
 <section class="main-section" id="Node.js_Home">
@@ -174,9 +176,9 @@ http.createServer(function (req, res) { <br>
   </div>
   <p>Now your application has access to the HTTP module, and is able to create a server:</p>
   <div class='code-box'>
-  <code>http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello World!');
+  <code>http.createServer(function (req, res) { <br>
+  res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+  res.end('Hello World!'); <br>
 }).listen(8080); </code>
   </div>
 
@@ -584,7 +586,7 @@ http.createServer(function (req, res) { <br>
 
   <h3>What is NPM?</h3>
   <p>NPM is a package manager for Node.js packages, or modules if you like.</p>
-  <p><a href="www.npmjs.com">www.npmjs.com</a> hosts thousands of free packages to download and use.</p>
+  <p><a href="https://www.npmjs.com/">www.npmjs.com</a> hosts thousands of free packages to download and use.</p>
   <p>The NPM program is installed on your computer when you install Node.js</p>
   <h4>NPM is already ready to run on your computer!</h4>
 
