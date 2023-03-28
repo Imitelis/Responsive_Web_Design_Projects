@@ -1,7 +1,7 @@
 # freeCodeCamp - Responsive Web Design - Projects - II - Build a Tribute Page - Instructions
 
 
-# 2. Projects - Build a Tribute Page
+## 2. Projects - Build a Tribute Page
 
 This is one of the required projects to earn your certification
 
