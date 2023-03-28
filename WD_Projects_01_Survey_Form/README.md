@@ -1,7 +1,7 @@
 # freeCodeCamp - Responsive Web Design - Projects - I - Build a Survey Form - Instructions
 
 
-# 1. Projects - Build a Survey Form
+## 1. Projects - Build a Survey Form
 
 This is one of the required projects to earn your certification
 
