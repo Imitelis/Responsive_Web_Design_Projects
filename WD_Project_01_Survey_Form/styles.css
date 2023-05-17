@@ -3,6 +3,7 @@ body {
   height: 125%;
   margin: auto;
   margin-top: 12%;
+  margin-bottom: 12%;
   background-color: mediumBlue;
   color: #f5f6f7;
   font-family: Tahoma;
@@ -25,7 +26,7 @@ body {
 .container {
   position: center;
   text-align: left;
-  padding-bottom: 500px;
+  padding-bottom:2em;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 2em;
