@@ -50,7 +50,7 @@ a {
   text-decoration: none;
   font-size: 17px;
   transition: all 0.3s ease-out;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-right: 40px;
   border-radius: 5px;
   word-wrap: break-word;
@@ -177,6 +177,8 @@ a {
   margin-right: 20px;
   font-size: 16px;
   color: white;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (max-width: 730px) {
@@ -220,5 +222,12 @@ a {
     font-size: 14px;
     word-wrap: break-word;
     margin-right: 80px;
+  }
+  #information ul {
+    flex-wrap: wrap;
+  }
+  #information li {
+    display: block;
+    margin-bottom: 10px;
   }
 }
