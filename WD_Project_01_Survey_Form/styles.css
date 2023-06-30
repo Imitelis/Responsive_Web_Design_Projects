@@ -65,6 +65,11 @@ label {
   width: 100%;
 }
 
+.form-options {
+  background-color: navy !important;
+  color: white !important;
+}
+
 .clue {
   font-size: 90%;
   font-style: italic;
@@ -81,10 +86,6 @@ label {
   border: 2px solid white;
   border-radius: 5%;
   min-width: 75px;
-}
-
-.form-group {
-  width: 100%;
 }
 
 textarea,

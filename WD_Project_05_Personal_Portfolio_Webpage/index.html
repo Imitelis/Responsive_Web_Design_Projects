@@ -1,104 +1,281 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-        <navbar id="navbar">
-          <ul>
-            <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
-            <li><a class="nav-link" href="#profile-section">Profile</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-          </ul>
-        </navbar>
-    </header>
-    <body>
-        <div id="welcome-section">
-          <h1>Welcome to my personal portafolio, here you will find sum information about my projects</h1>
-        </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="translatable" lang="eng">Personal Portfolio</title>
+    <title class="translatable" lang="esp">Portafolio de Proyectos</title>
+    <title class="translatable" lang="fra">Portfolio de Proyectes</title>
+    <title class="translatable" lang="por">Portofolio do Proihectos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      function changeLanguage() {
+        var langSelect = document.getElementById("langSelect");
+        var selectedLanguage = langSelect.value;
+        var elements = document.getElementsByClassName("translatable");
 
-        <div id="profile-section">
-          <h1>David S.olutions </h1>
-          <p>I like Qiskit and Flask</p>
-          <p>You talking to me? <a href="linkedin.com" id="profile-link" target="_blank">here</a> </p>
-        </div>
+        for (var i = 0; i < elements.length; i++) {
+          var element = elements[i];
+                
+          if (element.getAttribute("lang") === selectedLanguage) {
+            element.style.display = "block";
+          } else {
+            element.style.display = "none";
+          }
+        }
+      }
         
-        <div id="projects">
-          <h2>Current projects:</h2>
+      window.addEventListener("DOMContentLoaded", function() {
+        var langSelect = document.getElementById("langSelect");
+        langSelect.value = "eng";
+        changeLanguage();
+      });
 
-          <div class="project-tile">
-            <h3>Survey Form:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_01_Survey_Form/"></iframe>
-          <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_01_Survey_Form/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Tribute Page:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_02_Tribute_Page/"></iframe>
-          <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_02_Tribute_Page/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Technical Documentation Page:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_03_Technical_Documentation_Page/"></iframe>
-          <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_03_Technical_Documentation_Page/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Product Landing Page:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_04_Product_Landing_Page/"></iframe>
-          <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_04_Product_Landing_Page/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>The Matrix Digital Rain:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/The_Matrix_Digital_Rain_with_CanvasJS/"></iframe>
-          <a href="https://imitelis.github.io/The_Matrix_Digital_Rain_with_CanvasJS/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Particles with lines like Graphs:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Particles_with_lines_like_Graphs_with_CanvasJS/"></iframe>
-          <a href="https://imitelis.github.io/Particles_with_lines_like_Graphs_with_CanvasJS/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Moving circular Gradients:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Moving_circular_Gradients_with_CanvasJS/"></iframe>
-          <a href="https://imitelis.github.io/Moving_circular_Gradients_with_CanvasJS/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Moving function Waves:</h3>
-            <iframe class="preview-image" src="https://imitelis.github.io/Moving_function_Waves_with_CanvasJS/"></iframe>
-          <a href="https://imitelis.github.io/Moving_function_Waves_with_CanvasJS/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Random Quote Machine:</h3>
-            <iframe class="preview-image" src="https://cold-cherry-2654.fly.dev/"></iframe>
-          <a href="https://cold-cherry-2654.fly.dev/">visit here</a>
-          </div>
-          
-          <div class="project-tile">
-            <h3>Markdown Previewer:</h3>
-            <iframe class="preview-image" src="https://wild-sunset-647.fly.dev/"></iframe>
-          <a href="https://wild-sunset-647.fly.dev/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>Drum Machine:</h3>
-            <iframe class="preview-image" src="https://damp-star-7537.fly.dev/"></iframe>
-          <a href="https://damp-star-7537.fly.dev/">visit here</a>
-          </div>
-
-          <div class="project-tile">
-            <h3>JavaScript Calculator:</h3>
-            <iframe class="preview-image" src="https://red-paper-2199.fly.dev/"></iframe>
-          <a href="https://red-paper-2199.fly.dev/">visit here</a>
-          </div>
-          
+      function refreshIframe(iframeName) {
+        var ifr = document.getElementsByName(iframeName)[0];
+        ifr.src = ifr.src;
+      }
+    </script>
+    <nav id="navbar">
+      <ul>
+        <div id="navli" class="translatable" lang="eng">
+          <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
+          <li><a class="nav-link" href="#profile-section">Profile</a></li>
+          <li><a class="nav-link" href="#projects">Professional projects</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Miscellaneous projects</a></li>
+          <li><a class="nav-link" href="#contact-section">Contact</a></li>
         </div>
-    </body>
+        <div id="navli" class="translatable" lang="esp">
+          <li><a class="nav-link" href="#welcome-section">Bienvenido</a></li>
+          <li><a class="nav-link" href="#profile-section">Perfil</a></li>
+          <li><a class="nav-link" href="#projects">Proyectos profesionales</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Proyectos misceláneos</a></li>
+          <li><a class="nav-link" href="#contact-section">Contacto</a></li>
+        </div>
+        <div id="navli" class="translatable" lang="fra">
+          <li><a class="nav-link" href="#welcome-section">Bienvenue</a></li>
+          <li><a class="nav-link" href="#profile-section">Profil</a></li>
+          <li><a class="nav-link" href="#projects">Projets professionnels</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Projets divers</a></li>
+          <li><a class="nav-link" href="#contact-section">Contact</a></li>
+        </div>
+        <div id="navli" class="translatable" lang="por">
+          <li><a class="nav-link" href="#welcome-section">Bem-vindo</a></li>
+          <li><a class="nav-link" href="#profile-section">Perfil</a></li>
+          <li><a class="nav-link" href="#projects">Projetos profissionais</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Projetos diversos</a></li>
+          <li><a class="nav-link" href="#contact-section">Contato</a></li>
+        </div>
+        <select id="langSelect" onchange="changeLanguage()" required>
+          <option value="eng">English</option>
+          <option value="esp">Espanol</option>
+          <option value="fra">Français</option>
+          <option value="por">Portugues</option>
+      </select>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div id="welcome-section" class="translatable" lang="eng">
+      <h2>Welcome!</h2>
+      <h3>Welcome to my portafolio website. Here you can find some information about my profile, skills, projects and contact.</h3>
+    </div>
+
+    <div id="welcome-section" class="translatable" lang="esp">
+      <h2>Bienvenido!</h2>
+      <h3>Bienvenido a mi portafolio web. Aqui podras encontrar informacion sobre mi perfil, habilidades, proyectos y contacto.</h3>
+    </div>
+
+    <div id="welcome-section" class="translatable" lang="fra">
+      <h2>Bienvenue!</h2>
+      <h3>Bienvenue sur mon site portfolio. Vous trouverez ici des informations sur mon profil, mes compétences, mes projets et mon contact.</h3>
+    </div>
+
+    <div id="welcome-section" class="translatable" lang="por">
+      <h2>Bem-vindo!</h2>
+      <h3>Bem-vindo ao site do meu portfólio. Aqui você encontra informações sobre meu perfil, habilidades, projetos e contato.</h3>
+    </div>
+
+    <div id="profile-section" class="translatable" lang="eng">
+      <h2>Profile:</h2>
+      <p>My name is David. I graduated from a B.Sc. Mathematics in 2022. There I learnt about several topics; mostly contemporary mathematics.
+        I began coding around 2014 when I was 16 years old. My first programming language was C++. Then in my last year in college I dived into high-level programming
+        languages, particularly Python and JavaScript.
+      </p>
+      
+      <p>As an student:</p>
+      <ul>
+        <li>A first course in basic programming and another one in programming with numerical methods (both in C++)</li>
+        <li>Two courses in computation theory; finite automatons and Turing machines. The foundations of computer science.</li>
+        <li>One course in graph theory; structures, trees and graphs. It has some applications in data science and APIs.</li>
+        <li>One course in linear algebra and another one in multilinear algebra. It can be used for computational graphics and even quantum computing.</li>
+        <li>Three courses in abstract algebra; algebraic structures such as groups, rings and fields.</li>
+        
+        <li></li>
+        <li>Several freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others.</li>
+        <li>A diplomate in Software Development by MINTIC (Python, basics of Java and Django framework.)</li>
+        
+        
+      </ul>
+        
+      <p>Back in those years I worked in several part-time jobs. Archivistics, teaching and even customer service... I didnt have much time
+        to keep a job in the long term. So when I finished studying, I decided to focus exclusively in learning how to build web and native applications.
+        It took me time to get in the track. But after some months and after finishing some virtual courses on the topic (from which I mostly recommend freecodecamp.org and fullstackopen.com).
+        I was finally able to build software apps by my own. I have found this very enriching. 
+      </p>
+
+
+      <p>At the very moment I would like to dive more into Tensorflow and Qiskit</p>
+      
+    </div>
+
+    <div id="contact-section" class="translatable" lang="eng">
+      <h2>Contact:</h2>
+      <p>For business or academic inquiries, you can get in touch with me here: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+      <p>Calls and interviews are subject to my location and availability</p>
+    </div>
+
+    <div id="contact-section" class="translatable" lang="esp">
+      <h2>Contacto:</h2>
+      <p>Para solicitudes academicas o de negocios, podras ponerte en contacto conmigo aqui: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+      <p>Llamadas y entrevistas sujetas a mi ubicación y disponibilidad.</p>
+    </div>
+
+    <div id="contact-section" class="translatable" lang="fra">
+      <h2>Contact:</h2>
+      <p>Pour les demandes académiques ou professionnelles, vous pouvez me contacter ici: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+      <p>Appels et entretiens sous réserve de ma localisation et de mes disponibilités.</p>
+    </div>
+
+    <div id="contact-section" class="translatable" lang="por">
+      <h2>Contato:</h2>
+      <p>Para solicitações acadêmicas ou comerciais, você pode entrar em contato comigo aqui: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+      <p>Chamadas e entrevistas sujeitas à minha localização e disponibilidade.</p>
+    </div>
+
+    <div id="miscellaneous-projects">
+      <h2>Miscellaneous projects:</h2>
+      <p>These are the personal projects I have built in order to learn the different technologies that I currently use.</p>
+
+      <!--
+
+        <div class="project-form">
+        <h3>Random Quote Machine:</h3>
+
+        <div class="iframe-container">
+        <iframe class="preview-site" name="random-quote-machine" src="https://cold-cherry-2654.fly.dev/"></iframe>
+        <button class="refresh-button" onclick="refreshIframe('random-quote-machine')">REF</button>    
+        </div>
+        <p>Full site <a href="https://cold-cherry-2654.fly.dev/">here</a>. Source code <a href="https://cold-cherry-2654.fly.dev/">here</a>.</p>
+        </div>
+      -->
+
+      <div class="project-form">
+        <h3>Survey Form:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_01_Survey_Form/"></iframe>
+      <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_01_Survey_Form/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Tribute Page:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_02_Tribute_Page/"></iframe>
+      <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_02_Tribute_Page/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Technical Documentation Page:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_03_Technical_Documentation_Page/"></iframe>
+      <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_03_Technical_Documentation_Page/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Product Landing Page:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_04_Product_Landing_Page/"></iframe>
+      <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_04_Product_Landing_Page/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>The Matrix digital rain:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/The_Matrix_digital_rain_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/The_Matrix_digital_rain_with_CanvasJS/">visit here</a>
+      <button class="refresh-button" onclick="refreshSite()">Refresh</button>
+      </div>
+
+      <div class="project-form">
+        <h3>Particles with lines like Graphs:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Particles_with_lines_like_Graphs_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/Particles_with_lines_like_Graphs_with_CanvasJS/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Moving colorful Gradients:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Moving_colorful_Gradients_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/Moving_colorful_Gradients_with_CanvasJS/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Moving function Waves:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Moving_function_Waves_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/Moving_function_Waves_with_CanvasJS/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Neon Particles through hexagonal tiles:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Neon_Particles_through_hexagonal_tiles_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/Neon_Particles_through_hexagonal_tiles_with_CanvasJS/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Vivid winding Particles:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Vivid_winding_Particles_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/Vivid_winding_Particles_with_CanvasJS/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Vibrant Aurora borealis:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Vibrant_Aurora_borealis_with_CanvasJS/"></iframe>
+        Visit site <a href="https://imitelis.github.io/Vibrant_Aurora_borealis_with_CanvasJS/">here</a>. Source code <a href="https://github.com/Imitelis/Aurora_Borealis_with_CanvasJS">here</a>.
+      </div>
+
+      <div class="project-form">
+        <h3>Random Quote Machine:</h3>
+        <div class="iframe-container">
+        <iframe class="preview-site" name="random-quote-machine" src="https://cold-cherry-2654.fly.dev/"></iframe>
+        <button onclick="refreshIframe('random-quote-machine')">Refresh Iframe</button>    
+        </div>
+        <a href="https://cold-cherry-2654.fly.dev/">visit here</a>
+    </div>
+      
+      <div class="project-form">
+        <h3>Markdown Previewer:</h3>
+        <iframe class="preview-site" src="https://wild-sunset-647.fly.dev/"></iframe>
+      <a href="https://wild-sunset-647.fly.dev/">visit here</a>
+      
+      </div>
+
+      <div class="project-form">
+        <h3>Drum Machine:</h3>
+        <iframe class="preview-site" src="https://damp-star-7537.fly.dev/"></iframe>
+      <a href="https://damp-star-7537.fly.dev/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>JavaScript Calculator:</h3>
+        <iframe class="preview-site" src="https://red-paper-2199.fly.dev/"></iframe>
+      <a href="https://red-paper-2199.fly.dev/">visit here</a>
+      </div>
+      
+    </div>
+
+    <div id="projects">
+      <h2>Professional projects:</h2>
+      
+      <div class="project-form">
+        <h3>PDFhiru:</h3>
+        <iframe class="preview-site" src="https://pdfhiru.fly.dev/"></iframe>
+        Visit <a href="https://pdfhiru.fly.dev/"> here</a>. Source code is <a href="https://en.wikipedia.org/wiki/Proprietary_software">private</a>.
+      </div>      
+
+    </div>
+  </body>
 </html>

@@ -132,9 +132,9 @@ a {
 
 #video {
   aspect-ratio: auto 16 / 9;
-  width: 80%;
+  width: 95%;
   height: auto;
-  padding: 10%;
+  padding: 2.5%;
   border: none;
 }
 
