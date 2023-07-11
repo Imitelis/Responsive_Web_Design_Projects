@@ -90,14 +90,15 @@ a {
   transition: 0.2s;
 }
 
-#email-form {
-  padding: 20px;
-  color: white;
+#email {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; 
 }
 
 #email-form #email {
   color: white;
-  background-color: rgba(135, 0, 0, 0.8)
+  background-color: rgba(135, 0, 0, 0.8);
 }
 
 #email-form #submit {

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
-    <header>
+<html lang="en">
+  <header>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="translatable" lang="eng">Personal Portfolio</title>
-    <title class="translatable" lang="esp">Portafolio de Proyectos</title>
-    <title class="translatable" lang="fra">Portfolio de Proyectes</title>
-    <title class="translatable" lang="por">Portofolio do Proihectos</title>
+    <title>Personal Portfolio</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       function changeLanguage() {
-        var langSelect = document.getElementById("langSelect");
+        var langSelect = document.getElementById("lang-select");
         var selectedLanguage = langSelect.value;
         var elements = document.getElementsByClassName("translatable");
 
@@ -26,7 +26,7 @@
       }
         
       window.addEventListener("DOMContentLoaded", function() {
-        var langSelect = document.getElementById("langSelect");
+        var langSelect = document.getElementById("lang-select");
         langSelect.value = "eng";
         changeLanguage();
       });
@@ -35,127 +35,122 @@
         var ifr = document.getElementsByName(iframeName)[0];
         ifr.src = ifr.src;
       }
+
+      $(document).ready(function() {
+        var timer;
+
+        $('.container').on('mouseenter', function() {
+          var container = $(this);
+          timer = setTimeout(function() {
+            container.addClass('hovered');
+          }, 1200);
+        }).on('mouseleave', function() {
+          clearTimeout(timer);
+          $(this).removeClass('hovered');
+        });
+      });
     </script>
-    <nav id="navbar">
+    <nav id="navbar" class="gradient-border">
       <ul>
         <div id="navli" class="translatable" lang="eng">
-          <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
           <li><a class="nav-link" href="#profile-section">Profile</a></li>
-          <li><a class="nav-link" href="#projects">Professional projects</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Miscellaneous projects</a></li>
-          <li><a class="nav-link" href="#contact-section">Contact</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Miscellaneous</a></li>
+          <li><a class="nav-link" href="#welcome-section">DS</a></li>
         </div>
         <div id="navli" class="translatable" lang="esp">
-          <li><a class="nav-link" href="#welcome-section">Bienvenido</a></li>
           <li><a class="nav-link" href="#profile-section">Perfil</a></li>
-          <li><a class="nav-link" href="#projects">Proyectos profesionales</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Proyectos misceláneos</a></li>
-          <li><a class="nav-link" href="#contact-section">Contacto</a></li>
+          <li><a class="nav-link" href="#projects">Proyectos</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Misceláneos</a></li>
+          <li><a class="nav-link" href="#welcome-section">DS</a></li>
         </div>
         <div id="navli" class="translatable" lang="fra">
-          <li><a class="nav-link" href="#welcome-section">Bienvenue</a></li>
           <li><a class="nav-link" href="#profile-section">Profil</a></li>
-          <li><a class="nav-link" href="#projects">Projets professionnels</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Projets divers</a></li>
-          <li><a class="nav-link" href="#contact-section">Contact</a></li>
+          <li><a class="nav-link" href="#projects">Projets</a></li>
+          <li><a class="nav-link" href="#miscellaneous-projects">Divers</a></li>
+          <li><a class="nav-link" href="#welcome-section">DS</a></li>
         </div>
-        <div id="navli" class="translatable" lang="por">
-          <li><a class="nav-link" href="#welcome-section">Bem-vindo</a></li>
-          <li><a class="nav-link" href="#profile-section">Perfil</a></li>
-          <li><a class="nav-link" href="#projects">Projetos profissionais</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Projetos diversos</a></li>
-          <li><a class="nav-link" href="#contact-section">Contato</a></li>
-        </div>
-        <select id="langSelect" onchange="changeLanguage()" required>
+        <select id="lang-select" onchange="changeLanguage()" required>
           <option value="eng">English</option>
           <option value="esp">Espanol</option>
           <option value="fra">Français</option>
-          <option value="por">Portugues</option>
-      </select>
+        </select>
+        <li><a href="https://github.com/"><i class="fab fa-github icon" style="font-size:36px"></i></a></li>
+        <li><a href="mailto:"><i class="fas fa-envelope icon" style="font-size:36px"></i></a></li>
+        <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin icon" style="font-size:36px"></i></a></li>
       </ul>
     </nav>
   </header>
   <body>
-    <div id="welcome-section" class="translatable" lang="eng">
-      <h2>Welcome!</h2>
-      <h3>Welcome to my portafolio website. Here you can find some information about my profile, skills, projects and contact.</h3>
+
+    <div id="welcome-section" class="translatable container" lang="eng">
+      <h1>Welcome!</h1>
+      <h3 class="neonText">Welcome to my portafolio website. Here you can find some information about my profile, contact and projects.</h3>
+      <p class="neonText">text</p>
+      <i class="fas fa-file-alt"></i>
     </div>
 
-    <div id="welcome-section" class="translatable" lang="esp">
+    <div id="welcome-section" class="translatable container" lang="esp">
       <h2>Bienvenido!</h2>
-      <h3>Bienvenido a mi portafolio web. Aqui podras encontrar informacion sobre mi perfil, habilidades, proyectos y contacto.</h3>
+      <h3>Bienvenido a mi portafolio web. Aqui podras encontrar informacion sobre mi perfil, contacto y proyectos.</h3>
     </div>
 
-    <div id="welcome-section" class="translatable" lang="fra">
+    <div id="welcome-section" class="translatable container" lang="fra">
       <h2>Bienvenue!</h2>
-      <h3>Bienvenue sur mon site portfolio. Vous trouverez ici des informations sur mon profil, mes compétences, mes projets et mon contact.</h3>
+      <h3>Bienvenue sur mon site portfolio. Vous trouverez ici des informations sur mon profil, mon contact, et mes projets.</h3>
     </div>
 
-    <div id="welcome-section" class="translatable" lang="por">
-      <h2>Bem-vindo!</h2>
-      <h3>Bem-vindo ao site do meu portfólio. Aqui você encontra informações sobre meu perfil, habilidades, projetos e contato.</h3>
-    </div>
+    <div id="profile-section" class="translatable container" lang="eng">
+      <div class="container-title">
+        <p>About me:</p>
+      </div>
 
-    <div id="profile-section" class="translatable" lang="eng">
-      <h2>Profile:</h2>
-      <p>My name is David. I graduated from a B.Sc. Mathematics in 2022. There I learnt about several topics; mostly contemporary mathematics.
-        I began coding around 2014 when I was 16 years old. My first programming language was C++. Then in my last year in college I dived into high-level programming
-        languages, particularly Python and JavaScript.
-      </p>
+      <div class="container-text">
+        <p>
+          My name is David. I graduated from a B.Sc. Mathematics in 2021. There I learnt about several topics; mostly contemporary mathematics.
+          I began coding around 2014 when I was 16 years old. My first programming language was C++. Then through my last year in college I dived more into high-level programming
+          languages, mostly Python and JavaScript.
+        </p>
+      </div>
       
-      <p>As an student:</p>
-      <ul>
-        <li>A first course in basic programming and another one in programming with numerical methods (both in C++)</li>
-        <li>Two courses in computation theory; finite automatons and Turing machines. The foundations of computer science.</li>
-        <li>One course in graph theory; structures, trees and graphs. It has some applications in data science and APIs.</li>
-        <li>One course in linear algebra and another one in multilinear algebra. It can be used for computational graphics and even quantum computing.</li>
-        <li>Three courses in abstract algebra; algebraic structures such as groups, rings and fields.</li>
-        
-        <li></li>
-        <li>Several freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others.</li>
-        <li>A diplomate in Software Development by MINTIC (Python, basics of Java and Django framework.)</li>
-        
-        
-      </ul>
-        
-      <p>Back in those years I worked in several part-time jobs. Archivistics, teaching and even customer service... I didnt have much time
-        to keep a job in the long term. So when I finished studying, I decided to focus exclusively in learning how to build web and native applications.
-        It took me time to get in the track. But after some months and after finishing some virtual courses on the topic (from which I mostly recommend freecodecamp.org and fullstackopen.com).
-        I was finally able to build software apps by my own. I have found this very enriching. 
-      </p>
+      <h3>As an student:</h3>
+      <ol>
+        <li><em class="student-li">1.</em> A basic programming course and a programming with numerical methods course (C++).</li>
+        <li><em class="student-li">2.</em> Two computation theory courses; finite automatons and Turing machines. The foundations of computer science.</li>
+        <li><em class="student-li">3.</em> A graph theory course; structures, trees and graphs. It has some applications in data science and APIs.</li>
+        <li><em class="student-li">4.</em> A linear algebra course and a multilinear algebra course. It can be useful for computational graphics.</li>
+        <li><em class="student-li">5.</em> Several courses in mathematical analysis, abstract algebra, general topology, mathematical logics, etc.</li>    
+        <li><em class="student-li">6.</em> Research in an spectrographic analysis group (computer vision) for an academic start-up (ScikitPy, FlaskPy, NextJS).</li>
+        <li><em class="student-li">7.</em> Various freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others.</li>
+        <li><em class="student-li">8.</em> A national diplomat in Software Development (Python, basics of Java, MySQL and DjangoPy framework).</li>
+        <li><em class="student-li">9.</em> FullStack Open certification (ReactJS, NodeJS, MongoDB, Redux, GraphQL, TS, ReactNative, Docker).</li>
+        <li><em class="student-li">10.</em> At the very moment I would like to emphasize in Tensorflow and Qiskit.</li>
+      </ol>
 
-
-      <p>At the very moment I would like to dive more into Tensorflow and Qiskit</p>
-      
     </div>
 
-    <div id="contact-section" class="translatable" lang="eng">
-      <h2>Contact:</h2>
-      <p>For business or academic inquiries, you can get in touch with me here: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+    <div id="contact-section" class="translatable container" lang="eng">
+      <h2>CV & Contact:</h2>
+      <p>You can download my full CV (in English) here: <a href="#" class="contact-button">CV <i class="fas fa-file-alt"></i></a></p>
+      <p>For business or academic inquiries, you can get in touch with me here: <a href="mailto:" class="contact-button">Gmail <i class="fas fa-envelope"></i></a>
       <p>Calls and interviews are subject to my location and availability</p>
     </div>
 
-    <div id="contact-section" class="translatable" lang="esp">
-      <h2>Contacto:</h2>
-      <p>Para solicitudes academicas o de negocios, podras ponerte en contacto conmigo aqui: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+    <div id="contact-section" class="translatable container" lang="esp">
+      <h2>CV & Contacto:</h2>
+      <p>Para solicitudes academicas o de negocios, podras ponerte en contacto conmigo aquí: <a href="mailto:" id="profile-link" target="_blank">.@gmail.co</a></p>
       <p>Llamadas y entrevistas sujetas a mi ubicación y disponibilidad.</p>
     </div>
 
-    <div id="contact-section" class="translatable" lang="fra">
-      <h2>Contact:</h2>
-      <p>Pour les demandes académiques ou professionnelles, vous pouvez me contacter ici: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
+    <div id="contact-section" class="translatable container" lang="fra">
+      <h2>CV & Contact:</h2>
+      <p>Pour les demandes académiques ou professionnelles, vous pouvez me contacter ici: <a href="mailto:" id="profile-link" target="_blank">.@gmail.co</a></p>
       <p>Appels et entretiens sous réserve de ma localisation et de mes disponibilités.</p>
-    </div>
-
-    <div id="contact-section" class="translatable" lang="por">
-      <h2>Contato:</h2>
-      <p>Para solicitações acadêmicas ou comerciais, você pode entrar em contato comigo aqui: <a href="mailto:dsaavedra@unal.edu.co" id="profile-link" target="_blank">dsaavedra@unal.edu.co</a></p>
-      <p>Chamadas e entrevistas sujeitas à minha localização e disponibilidade.</p>
     </div>
 
     <div id="miscellaneous-projects">
       <h2>Miscellaneous projects:</h2>
-      <p>These are the personal projects I have built in order to learn the different technologies that I currently use.</p>
+      <p>These are the studying projects that I have built to become familiar with the various technologies that I currently use.</p>
 
       <!--
 
@@ -248,19 +243,21 @@
       </div>
 
       <div class="project-form">
+        <h3>Planting leafless Trees:</h3>
+        <iframe class="preview-site" src="https://imitelis.github.io/Planting_leafless_Trees_with_CanvasJS/"></iframe>
+      <a href="https://imitelis.github.io/Planting_leafless_Trees_with_CanvasJS/">visit here</a>
+      </div>
+
+      <div class="project-form">
         <h3>Vibrant Aurora borealis:</h3>
         <iframe class="preview-site" src="https://imitelis.github.io/Vibrant_Aurora_borealis_with_CanvasJS/"></iframe>
         Visit site <a href="https://imitelis.github.io/Vibrant_Aurora_borealis_with_CanvasJS/">here</a>. Source code <a href="https://github.com/Imitelis/Aurora_Borealis_with_CanvasJS">here</a>.
       </div>
 
-      <div class="project-form">
-        <h3>Random Quote Machine:</h3>
-        <div class="iframe-container">
-        <iframe class="preview-site" name="random-quote-machine" src="https://cold-cherry-2654.fly.dev/"></iframe>
-        <button onclick="refreshIframe('random-quote-machine')">Refresh Iframe</button>    
-        </div>
-        <a href="https://cold-cherry-2654.fly.dev/">visit here</a>
-    </div>
+    <div class="project-form">
+      <h3>Random Quote Machine:</h3>
+      <iframe class="preview-site" src="https://cool-water-1988.fly.dev/"></iframe>
+    <a href="https://cool-water-1988.fly.dev/">visit here</a>
       
       <div class="project-form">
         <h3>Markdown Previewer:</h3>
@@ -271,14 +268,20 @@
 
       <div class="project-form">
         <h3>Drum Machine:</h3>
-        <iframe class="preview-site" src="https://damp-star-7537.fly.dev/"></iframe>
-      <a href="https://damp-star-7537.fly.dev/">visit here</a>
+        <iframe class="preview-site" src="https://green-shadow-9504.fly.dev/"></iframe>
+      <a href="https://green-shadow-9504.fly.dev/">visit here</a>
       </div>
 
       <div class="project-form">
         <h3>JavaScript Calculator:</h3>
         <iframe class="preview-site" src="https://red-paper-2199.fly.dev/"></iframe>
       <a href="https://red-paper-2199.fly.dev/">visit here</a>
+      </div>
+
+      <div class="project-form">
+        <h3>Request Header Parser Microservice:</h3>
+        <iframe class="preview-site" src="https://bitter-morning-4367.fly.dev/"></iframe>
+      <a href="https://bitter-morning-4367.fly.dev/">visit here</a>
       </div>
 
         <div class="project-form">
@@ -296,7 +299,7 @@
       
       <div class="project-form">
         <h3>PDFhiru:</h3>
-          <h4>(FlaskPY + Jinja + OCR + fly.io)</h4>
+          <h4>(FlaskPy + Jinja + CSS + OCR + Dockerfile + fly.io)</h4>
             <p>PDF Text, Images and Latex extractor for prompting</p>
         <iframe class="preview-site" src="https://pdfhiru.fly.dev/"></iframe>
         Visit <a href="https://pdfhiru.fly.dev/"> here</a>. Source code is <a href="https://en.wikipedia.org/wiki/Proprietary_software">private</a>.

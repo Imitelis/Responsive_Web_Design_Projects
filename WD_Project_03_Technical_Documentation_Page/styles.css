@@ -1,17 +1,17 @@
 html {
-  background-color: grey;
+  background-color: silver;
   width: 100vw;
   height: 100vh;
 }
 
 body {
   margin: 0;
-  background-color: grey;
+  background-color: silver;
 }
 
 main {
   position: absolute;
-  background-color: grey;
+  background-color: silver;
   top: 0;
   padding-top: 0;
   width: 80vw;
@@ -40,11 +40,11 @@ a {
 }
 
 a:hover {
-  color: yellowgreen;
+  color: seagreen;
 }
 
 b {
-  color: yellowgreen;
+  color: seagreen;
 }
 
 #main-doc header {
