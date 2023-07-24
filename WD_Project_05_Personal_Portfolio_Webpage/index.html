@@ -8,162 +8,72 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      function changeLanguage() {
-        var langSelect = document.getElementById("lang-select");
-        var selectedLanguage = langSelect.value;
-        var elements = document.getElementsByClassName("translatable");
-
-        for (var i = 0; i < elements.length; i++) {
-          var element = elements[i];
-                
-          if (element.getAttribute("lang") === selectedLanguage) {
-            element.style.display = "block";
-          } else {
-            element.style.display = "none";
-          }
-        }
-      }
-        
-      window.addEventListener("DOMContentLoaded", function() {
-        var langSelect = document.getElementById("lang-select");
-        langSelect.value = "eng";
-        changeLanguage();
-      });
-
-      function refreshIframe(iframeName) {
-        var ifr = document.getElementsByName(iframeName)[0];
-        ifr.src = ifr.src;
-      }
-
-      $(document).ready(function() {
-        var timer;
-
-        $('.container').on('mouseenter', function() {
-          var container = $(this);
-          timer = setTimeout(function() {
-            container.addClass('hovered');
-          }, 1200);
-        }).on('mouseleave', function() {
-          clearTimeout(timer);
-          $(this).removeClass('hovered');
-        });
-      });
-    </script>
+    <div id="logo">
+      Portfolio
+    </div>
     <nav id="navbar" class="gradient-border">
       <ul>
-        <div id="navli" class="translatable" lang="eng">
+        <div id="navli" >
+          <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
           <li><a class="nav-link" href="#profile-section">Profile</a></li>
+          <li><a class="nav-link" href="#contact-section">Contact</a></li>
           <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Miscellaneous</a></li>
-          <li><a class="nav-link" href="#welcome-section">DS</a></li>
         </div>
-        <div id="navli" class="translatable" lang="esp">
-          <li><a class="nav-link" href="#profile-section">Perfil</a></li>
-          <li><a class="nav-link" href="#projects">Proyectos</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Misceláneos</a></li>
-          <li><a class="nav-link" href="#welcome-section">DS</a></li>
-        </div>
-        <div id="navli" class="translatable" lang="fra">
-          <li><a class="nav-link" href="#profile-section">Profil</a></li>
-          <li><a class="nav-link" href="#projects">Projets</a></li>
-          <li><a class="nav-link" href="#miscellaneous-projects">Divers</a></li>
-          <li><a class="nav-link" href="#welcome-section">DS</a></li>
-        </div>
-        <select id="lang-select" onchange="changeLanguage()" required>
-          <option value="eng">English</option>
-          <option value="esp">Espanol</option>
-          <option value="fra">Français</option>
-        </select>
-        <li><a href="https://github.com/"><i class="fab fa-github icon" style="font-size:36px"></i></a></li>
-        <li><a href="mailto:"><i class="fas fa-envelope icon" style="font-size:36px"></i></a></li>
-        <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin icon" style="font-size:36px"></i></a></li>
       </ul>
     </nav>
   </header>
   <body>
-
-    <div id="welcome-section" class="translatable container" lang="eng">
-      <h1>Welcome!</h1>
-      <h3 class="neonText">Welcome to my portafolio website. Here you can find some information about my profile, contact and projects.</h3>
-      <p class="neonText">text</p>
-      <i class="fas fa-file-alt"></i>
+    
+    <div id="welcome-section" class="welcome-container">
+      <div class="welcome-title">Welcome!</div>
+      <div class="welcome-text">Welcome to my portafolio website. Here you can find some information about my profile, contact and projects.</div>
     </div>
 
-    <div id="welcome-section" class="translatable container" lang="esp">
-      <h2>Bienvenido!</h2>
-      <h3>Bienvenido a mi portafolio web. Aqui podras encontrar informacion sobre mi perfil, contacto y proyectos.</h3>
-    </div>
 
-    <div id="welcome-section" class="translatable container" lang="fra">
-      <h2>Bienvenue!</h2>
-      <h3>Bienvenue sur mon site portfolio. Vous trouverez ici des informations sur mon profil, mon contact, et mes projets.</h3>
-    </div>
 
-    <div id="profile-section" class="translatable container" lang="eng">
-      <div class="container-title">
-        <p>About me:</p>
+    <div id="profile-section" class="section-container">
+
+      <div class="full-width">
+        <div class="container-title">Profile:</div>
       </div>
 
-      <div class="container-text">
-        <p>
-          My name is David. I graduated from a B.Sc. Mathematics in 2021. There I learnt about several topics; mostly contemporary mathematics.
-          I began coding around 2014 when I was 16 years old. My first programming language was C++. Then through my last year in college I dived more into high-level programming
-          languages, mostly Python and JavaScript.
-        </p>
+      <div class="column">
+        <h3>About me:</h3>
+        <div class="container-text">
+          My name is David. I'm a Full-stack developer and a B.Sc. in Mathematics. 
+          I began coding around 2014 when I was 16 years old. My first programming language was C++.
+          Through my last year in college I dived more into high-level programming languages, mostly Python and JavaScript.
       </div>
-      
-      <h3>As an student:</h3>
-      <ol>
-        <li><em class="student-li">1.</em> A basic programming course and a programming with numerical methods course (C++).</li>
-        <li><em class="student-li">2.</em> Two computation theory courses; finite automatons and Turing machines. The foundations of computer science.</li>
-        <li><em class="student-li">3.</em> A graph theory course; structures, trees and graphs. It has some applications in data science and APIs.</li>
-        <li><em class="student-li">4.</em> A linear algebra course and a multilinear algebra course. It can be useful for computational graphics.</li>
-        <li><em class="student-li">5.</em> Several courses in mathematical analysis, abstract algebra, general topology, mathematical logics, etc.</li>    
-        <li><em class="student-li">6.</em> Research in an spectrographic analysis group (computer vision) for an academic start-up (ScikitPy, FlaskPy, NextJS).</li>
-        <li><em class="student-li">7.</em> Various freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others.</li>
-        <li><em class="student-li">8.</em> A national diplomat in Software Development (Python, basics of Java, MySQL and DjangoPy framework).</li>
-        <li><em class="student-li">9.</em> FullStack Open certification (ReactJS, NodeJS, MongoDB, Redux, GraphQL, TS, ReactNative, Docker).</li>
-        <li><em class="student-li">10.</em> At the very moment I would like to emphasize in Tensorflow and Qiskit.</li>
-      </ol>
+      </div>
+
+      <div class="column">
+        <h3>As a developer:</h3>
+        <ol>
+          <li> Various freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others.</li>
+          <li> FullStack Open certification (ReactJS, NodeJS, MongoDB, Redux, GraphQL, TS, ReactNative, Docker).</li>
+        </ol>
+      </div>
 
     </div>
 
-    <div id="contact-section" class="translatable container" lang="eng">
-      <h2>CV & Contact:</h2>
-      <p>You can download my full CV (in English) here: <a href="#" class="contact-button">CV <i class="fas fa-file-alt"></i></a></p>
-      <p>For business or academic inquiries, you can get in touch with me here: <a href="mailto:" class="contact-button">Gmail <i class="fas fa-envelope"></i></a>
-      <p>Calls and interviews are subject to my location and availability</p>
+    <div id="contact-section" class="section-container">
+      <div class="full-width">
+        <div class="container-title">Contact:</div>
+      </div>
+
+      <div class="full-width">
+        <p>You can download my full CV (in English) here: <a href="#" class="contact-button">CV <i class="fas fa-file-alt"></i></a></p>
+        <p>For business or academic inquiries, you can get in touch with me here: <a id="profile-link" href="mailto:" target="_blank" class="contact-button">Gmail <i class="fas fa-envelope"></i></a>
+        <p>Calls and interviews are subject to my location and availability</p>
+        <a href="https://github.com/"><i class="fab fa-github icon" style="font-size:36px"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin icon" style="font-size:36px"></i></a>
+      </div>
+
     </div>
 
-    <div id="contact-section" class="translatable container" lang="esp">
-      <h2>CV & Contacto:</h2>
-      <p>Para solicitudes academicas o de negocios, podras ponerte en contacto conmigo aquí: <a href="mailto:" id="profile-link" target="_blank">.@gmail.co</a></p>
-      <p>Llamadas y entrevistas sujetas a mi ubicación y disponibilidad.</p>
-    </div>
-
-    <div id="contact-section" class="translatable container" lang="fra">
-      <h2>CV & Contact:</h2>
-      <p>Pour les demandes académiques ou professionnelles, vous pouvez me contacter ici: <a href="mailto:" id="profile-link" target="_blank">.@gmail.co</a></p>
-      <p>Appels et entretiens sous réserve de ma localisation et de mes disponibilités.</p>
-    </div>
-
-    <div id="miscellaneous-projects">
-      <h2>Miscellaneous projects:</h2>
-      <p>These are the studying projects that I have built to become familiar with the various technologies that I currently use.</p>
-
-      <!--
-
-        <div class="project-form">
-        <h3>Random Quote Machine:</h3>
-
-        <div class="iframe-container">
-        <iframe class="preview-site" name="random-quote-machine" src="https://cold-cherry-2654.fly.dev/"></iframe>
-        <button class="refresh-button" onclick="refreshIframe('random-quote-machine')">REF</button>    
-        </div>
-        <p>Full site <a href="https://cold-cherry-2654.fly.dev/">here</a>. Source code <a href="https://cold-cherry-2654.fly.dev/">here</a>.</p>
-        </div>
-      -->
+    <div id="projects" class="section-container">
+      <h2>Projects:</h2>
+      <p>These are some of my freeCodeCamp projects. They are for educational purposes only.</p>
 
       <div class="project-form">
         <h3>Survey Form:</h3>
@@ -187,71 +97,6 @@
         <h3>Product Landing Page:</h3>
         <iframe class="preview-site" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_04_Product_Landing_Page/"></iframe>
       <a href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_04_Product_Landing_Page/">visit here</a>
-      </div>
-
-      <div class="project-form">
-        <h3>The Matrix digital rain:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/The_Matrix_digital_rain_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/The_Matrix_digital_rain_with_CanvasJS/">visit here</a>
-      <button class="refresh-button" onclick="refreshSite()">Refresh</button>
-      </div>
-
-      <div class="project-form">
-        <h3>Particles with lines like Graphs:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Particles_with_lines_like_Graphs_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Particles_with_lines_like_Graphs_with_CanvasJS/">visit here</a>
-      </div>
-
-      <div class="project-form">
-        <h3>Moving colorful Gradients:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Moving_colorful_Gradients_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Moving_colorful_Gradients_with_CanvasJS/">visit here</a>
-      </div>
-
-      <div class="project-form">
-        <h3>Moving function Waves:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Moving_function_Waves_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Moving_function_Waves_with_CanvasJS/">visit here</a>
-      </div>
-
-        <div class="project-form">
-        <h3>Active firelight:</h3>
-            <h4>(CanvasJS)</h4>
-            <p>from </p>
-            <iframe class="preview-site" src="https://imitelis.github.io/Active_firelight_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Active_firelight_with_CanvasJS/">visit here</a>
-      </div>
-
-        <div class="project-form">
-        <h3>Sparkling trail circles:</h3>
-            <h4>(CanvasJS)</h4>
-            <p>from </p>
-            <iframe class="preview-site" src="https://imitelis.github.io/Sparkling_trail_circles_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Sparkling_trail_circles_with_CanvasJS/">visit here</a>
-      </div>
-
-        <div class="project-form">
-        <h3>Vivid winding Particles:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Vivid_winding_Particles_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Vivid_winding_Particles_with_CanvasJS/">visit here</a>
-      </div>
-
-        <div class="project-form">
-        <h3>Neon Particles through hexagonal tiles:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Neon_Particles_through_hexagonal_tiles_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Neon_Particles_through_hexagonal_tiles_with_CanvasJS/">visit here</a>
-      </div>
-
-      <div class="project-form">
-        <h3>Planting leafless Trees:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Planting_leafless_Trees_with_CanvasJS/"></iframe>
-      <a href="https://imitelis.github.io/Planting_leafless_Trees_with_CanvasJS/">visit here</a>
-      </div>
-
-      <div class="project-form">
-        <h3>Vibrant Aurora borealis:</h3>
-        <iframe class="preview-site" src="https://imitelis.github.io/Vibrant_Aurora_borealis_with_CanvasJS/"></iframe>
-        Visit site <a href="https://imitelis.github.io/Vibrant_Aurora_borealis_with_CanvasJS/">here</a>. Source code <a href="https://github.com/Imitelis/Aurora_Borealis_with_CanvasJS">here</a>.
       </div>
 
     <div class="project-form">
@@ -284,27 +129,7 @@
       <a href="https://bitter-morning-4367.fly.dev/">visit here</a>
       </div>
 
-        <div class="project-form">
-        <h3>Phonebook app:</h3>
-            <h4>(ReactJS + NodeJS + MongoDB + fly.io)</h4>
-            <p>from the FullStack Open Course Part 3</p>
-            <iframe class="preview-site" src="https://cold-water-2117.fly.dev/"></iframe>
-      <a href="https://cold-water-2117.fly.dev/">visit here</a>
-      </div>
-      
     </div>
 
-    <div id="projects">
-      <h2>Professional projects:</h2>
-      
-      <div class="project-form">
-        <h3>PDFhiru:</h3>
-          <h4>(FlaskPy + Jinja + CSS + OCR + Dockerfile + fly.io)</h4>
-            <p>PDF Text, Images and Latex extractor for prompting</p>
-        <iframe class="preview-site" src="https://pdfhiru.fly.dev/"></iframe>
-        Visit <a href="https://pdfhiru.fly.dev/"> here</a>. Source code is <a href="https://en.wikipedia.org/wiki/Proprietary_software">private</a>.
-      </div>      
-
-    </div>
   </body>
 </html>
