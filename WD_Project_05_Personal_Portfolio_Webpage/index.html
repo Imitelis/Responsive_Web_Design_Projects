@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <header>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
@@ -8,27 +8,49 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <div id="logo">
-      Portfolio
-    </div>
-    <nav id="navbar" class="gradient-border">
-      <ul>
-        <div id="navli" >
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        Portfolio
+      </div>
+      <nav id="navbar">
+        <ul>
+          <div id="navli" >
+            <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
+            <li><a class="nav-link" href="#profile-section">Profile</a></li>
+            <li><a class="nav-link" href="#contact-section">Contact</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+          </div>
+        </ul>
+      </nav>
+      <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+      <script>
+        function toggleMenu() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('visible');
+      }
+      </script>
+      <div id="mobile-menu">
+        <ul>
           <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
           <li><a class="nav-link" href="#profile-section">Profile</a></li>
           <li><a class="nav-link" href="#contact-section">Contact</a></li>
           <li><a class="nav-link" href="#projects">Projects</a></li>
-        </div>
-      </ul>
-    </nav>
-    <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
-  </header>
-  <body>
-    
+        </ul>
+      </div>
+    </header>
+
     <div id="welcome-section" class="welcome-container">
       <div class="welcome-title"><h1>Welcome!</h1></div>
       <div class="centered-text">Welcome to my portafolio website. Here you can find some information about my profile, contact and projects.</div>
     </div>
+
+    <div id="dip"> Click the below buttons to hide or show this text. 
+    </div>
+
+    <button onclick="hide()"> ☰ </button>
+   <button onclick="toggleMenu()"> Show Element </button>
 
     <div id="profile-section" class="section-container">
 
@@ -118,37 +140,43 @@
           <p>Visit website <a class="project-link" href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_05_Personal_Portfolio_Webpage/">here</a></p>
         </div>
 
+        <div class="project-tile">
+          <h3>Random Quote Machine</h3>
+          <iframe class="project-preview" src="https://cool-water-1988.fly.dev/"></iframe>
+          <p>Visit website <a class="project-link" href="https://cool-water-1988.fly.dev/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>Markdown Previewer</h3>
+          <iframe class="project-preview" src="https://red-smoke-1303.fly.dev/"></iframe>
+          <p>Visit website <a class="project-link" href="https://red-smoke-1303.fly.dev/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>Drum Machine</h3>
+          <iframe class="project-preview" src="https://green-shadow-9504.fly.dev/"></iframe>
+          <p>Visit website <a class="project-link" href="https://green-shadow-9504.fly.dev/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>JavaScript Calculator</h3>
+          <iframe class="project-preview" src="https://holy-resonance-2412.fly.dev/"></iframe>
+          <p>Visit website <a class="project-link" href="https://holy-resonance-2412.fly.dev/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>25 + 5 Clock</h3>
+          <iframe class="project-preview" src="https://wild-dew-1916.fly.dev/"></iframe>
+          <p>Visit website <a class="project-link" href="https://wild-dew-1916.fly.dev/">here</a></p>
+        </div>
+
         </div>
       </div>
 
-      <!--
-
-      <div class="project-form">
-      <h3>Random Quote Machine:</h3>
-      <iframe class="preview-site" src="https://cool-water-1988.fly.dev/"></iframe>
-      <a href="https://cool-water-1988.fly.dev/">visit here</a>
-      
-      <div class="project-form">
-        <h3>Markdown Previewer:</h3>
-        <iframe class="preview-site" src="https://wild-sunset-647.fly.dev/"></iframe>
-      <a href="https://wild-sunset-647.fly.dev/">visit here</a>
-      
-      </div>
-
-      <div class="project-form">
-        <h3>Drum Machine:</h3>
-        <iframe class="preview-site" src="https://green-shadow-9504.fly.dev/"></iframe>
-      <a href="https://green-shadow-9504.fly.dev/">visit here</a>
-      </div>
-
-      <div class="project-form">
-        <h3>JavaScript Calculator:</h3>
-        <iframe class="preview-site" src="https://red-paper-2199.fly.dev/"></iframe>
-      <a href="https://red-paper-2199.fly.dev/">visit here</a>
-      </div>
-      -->
-
     </div>
-
   </body>
+  <footer>
+    <div class="footer-column">freeCodeCamp Personal Portfolio</div>
+    <div class="footer-column">© 2023 All rights reserved</div>
+  </footer>
 </html>

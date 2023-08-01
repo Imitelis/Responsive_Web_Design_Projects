@@ -1,6 +1,8 @@
 body {
   background-color: skyblue;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -10,18 +12,19 @@ header {
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  max-height: 50px;
   border-radius: 0 0 15px 15px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
   box-sizing: border-box;
   width: 100vw;
   height: 15vh;
+  max-height: 50px;
   top: 0px;
   left: 0px;
   right: 0px;
   border: 1px dodgerblue solid;
   border-top-width: 0;
+  z-index: 2;
 }
 
 #logo {
@@ -69,6 +72,49 @@ header {
   display: none;
   color: dodgerblue;
   margin-right: 15px;
+}
+
+#mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  z-index: -1;
+  background-color: white;
+  position: fixed;
+  overflow: hidden;
+  top: 0px;
+  width: 100vw;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 0 0 15px 15px;
+  width: 100vw;
+  height: 35vh;
+  max-height: 145px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  border: 1px dodgerblue solid;
+  border-top-width: 0;
+  padding-top: 10vh;
+  display: none;
+}
+
+#mobile-menu.visible {
+  display: block;
+}
+
+#mobile-menu li a {
+  color: dodgerblue;
+  text-decoration: none;
+  position: relative;
+  right: 2.5vw;
+}
+
+#mobile-menu li a:hover {
+  border-bottom: 1px solid dodgerblue;
+  padding-bottom: 1px;
+  transition: padding-bottom 0.3s;
 }
 
 #welcome-section {
@@ -186,14 +232,76 @@ header {
   text-decoration: none;
 }
 
+footer {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 12vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 1px dodgerblue solid;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  position: static;
+  color: dodgerblue;
+  justify-content: center;
+}
+
+.footer-column {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  flex: 1;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 769px) {
+  #mobile-menu {
+    display: none;
+  }
+
+  #mobile-menu.visible {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #navbar {
     display: none;
   }
+  
   .hamburger-menu {
     display: block;
   }
+
   .section-container .column {
     grid-column: 1 / span 2;
+  }
+  
+  .project-preview {
+    border-radius: 10px;
+    width: 90vw;
+    height: 50vw;
+  }
+  
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  footer {
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    max-width: none;
   }
 }
