@@ -75,7 +75,7 @@ header {
 }
 
 #mobile-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center; 
@@ -89,15 +89,14 @@ header {
   box-sizing: border-box;
   border-radius: 0 0 15px 15px;
   width: 100vw;
-  height: 35vh;
-  max-height: 145px;
+  height: 40vh;
+  max-height: 165px;
   top: 0px;
   left: 0px;
   right: 0px;
   border: 1px dodgerblue solid;
   border-top-width: 0;
   padding-top: 10vh;
-  display: none;
 }
 
 #mobile-menu.visible {
