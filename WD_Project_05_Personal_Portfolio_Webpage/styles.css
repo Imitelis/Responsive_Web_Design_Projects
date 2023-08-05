@@ -72,6 +72,15 @@ header {
   display: none;
   color: dodgerblue;
   margin-right: 15px;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.hamburger-menu:hover {
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
 }
 
 #mobile-menu {
