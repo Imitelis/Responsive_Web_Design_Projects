@@ -12,94 +12,31 @@
   <body>
     <header>
       <div id="logo">
-        Portfolio
+        My Portfolio
       </div>
       <nav id="navbar">
         <ul>
-          <div id="navli" >
-            <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
+            <li><a class="nav-link" href="#welcome-section">Hello</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
             <li><a class="nav-link" href="#profile-section">Profile</a></li>
             <li><a class="nav-link" href="#contact-section">Contact</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-          </div>
         </ul>
       </nav>
-      <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
-      <script>
-        function toggleMenu() {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('visible');
-      }
-      </script>
-      <div id="mobile-menu">
-        <ul>
-          <li><a class="nav-link" href="#welcome-section">Welcome</a></li>
-          <li><a class="nav-link" href="#profile-section">Profile</a></li>
-          <li><a class="nav-link" href="#contact-section">Contact</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-        </ul>
-      </div>
     </header>
 
     <div id="welcome-section" class="welcome-container">
-      <div class="welcome-title"><h1>Welcome!</h1></div>
-      <div class="centered-text">Welcome to my portafolio website. Here you can find some information about my profile, contact and projects.</div>
+      <div class="welcome-title"><h1>I'm David</h1></div>
+      <div class="centered-text">Full-Stack, MLOps, DevOps, TechLead Entrepeneur</div>
     </div>
 
-    <div id="profile-section" class="section-container">
-
-      <div class="full-width">
-        <div class="container-title">Profile</div>
-      </div>
-
-      <div class="column">
-        <h3>About me</h3>
-        <div class="container-text">
-          My name is David. I'm a Full-stack developer and a B.Sc. in Mathematics. 
-          I began coding around 2014 when I was 16 years old. My first programming language was C++.
-          Through my last year in college I dived more into high-level programming languages, mostly Python and JavaScript.
-      </div>
-      </div>
-
-      <div class="column">
-        <h3>My education</h3>
-        <span class="custom-li">1.</span> B.Sc. in Mathematics. <br/>
-            <span class="custom-li">2.</span> Various freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others. <br/>
-            <span class="custom-li">3.</span> FullStack Open certification (ReactJS, NodeJS, MongoDB, Redux, GraphQL, TS, ReactNative, Docker).
-      </div>
-
-    </div>
-
-    <div id="contact-section" class="section-container">
-      <div class="full-width">
-        <div class="container-title">Contact</div>
-      </div>
-
-      <div class="column">
-        <h3>CV & Email</h3>
-        <div class="container-text">
-          <p>You can download my full CV (in English) here: <a class="contact-button" href="#contact-section"><i class="fas fa-file-alt"></i> CV</a></p>
-          <p>For business inquiries, you can get in touch with me here: <a id="profile-link" class="contact-button" href="mailto:" target="_blank"><i class="fas fa-envelope"></i> Email</a>
-      </div>
-      </div>
-
-      <div class="column">
-        <h3>Github & Social media</h3>
-        <div class="container-text">
-          <p>You can follow me here:</p>
-          <div class="follow-buttons">
-            <p><a class="contact-button" href="https://github.com/"><i class="fab fa-github icon"></i> Github</a></p>
-            <p><a class="contact-button" href="https://www.linkedin.com/"><i class="fab fa-linkedin icon"></i> LinkedIn</a></p>
-            <p><a class="contact-button" href="https://www.twitter.com/"><i class="fab fa-twitter icon"></i> Twitter</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <div id="projects" class="section-container">
       <div class="full-width">
-        <div class="container-title">Projects</div>
-        <div class="centered-text">These are some of my freeCodeCamp projects. They are for educational purposes only.</div>
+        <div class="projects-title">
+          <div class="container-title">Projects</div>
+          <div class="centered-text">These are some of my freeCodeCamp projects.</div>
+        </div>        
       </div>
 
       <div class="full-width">
@@ -129,9 +66,33 @@
         </div>
 
         <div class="project-tile">
-          <h3>Personal Portfolio Webpage</h3>
-          <iframe class="project-preview" src="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_05_Personal_Portfolio_Webpage/"></iframe>
-          <p>Visit website <a class="project-link" href="https://imitelis.github.io/Responsive_Web_Design_Projects/WD_Project_05_Personal_Portfolio_Webpage/">here</a></p>
+          <h3>Bar Chart</h3>
+          <iframe class="project-preview" src="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_01_Bar_Chart/"></iframe>
+          <p>Visit website <a class="project-link" href="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_01_Bar_Chart/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>Scatterplot Graph</h3>
+          <iframe class="project-preview" src="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_02_Scatterplot_Graph/"></iframe>
+          <p>Visit website <a class="project-link" href="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_02_Scatterplot_Graph/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>Heat Map</h3>
+          <iframe class="project-preview" src="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_03_Heat_Map/"></iframe>
+          <p>Visit website <a class="project-link" href="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_03_Heat_Map/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>Choropleth Map</h3>
+          <iframe class="project-preview" src="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_04_Choropleth_Map/"></iframe>
+          <p>Visit website <a class="project-link" href="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_04_Choropleth_Map/">here</a></p>
+        </div>
+
+        <div class="project-tile">
+          <h3>Treemap Diagram</h3>
+          <iframe class="project-preview" src="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_05_Treemap_Diagram/"></iframe>
+          <p>Visit website <a class="project-link" href="https://imitelis.github.io/Data_Visualization_Projects/DV_Project_05_Treemap_Diagram/">here</a></p>
         </div>
 
         <div class="project-tile">
@@ -168,9 +129,50 @@
       </div>
 
     </div>
+
+    <div id="profile-section" class="section-container">
+
+      <div class="full-width">
+        <div class="container-title">About me</div>
+      </div>
+
+      <div class="section-column">
+        <h3>My profile</h3>
+        <div class="container-text">
+          My name is David. I'm a Full-stack developer and a B.Sc. in Mathematics. 
+          I began coding around 2014 when I was 16 years old. My first programming language was C++.
+          Through my last year in college I dived more into high-level programming languages, mostly Python and JavaScript.
+      </div>
+      </div>
+
+      <div class="section-column">
+        <h3>My education</h3>
+        <div class="container-text">
+          <span class="custom-li">1.</span> B.Sc. in Mathematics. <br/>
+          <span class="custom-li">2.</span> Various freeCodeCamp certifications; Web design, Javascript, Frontend, Backend, Data science, among others. <br/>
+          <span class="custom-li">3.</span> FullStack Open certification (ReactJS, NodeJS, MongoDB, Redux, GraphQL, TS, ReactNative, Docker).
+        </div>
+      </div>
+
+    </div>
+
+    <div id="contact-section" class="section-container">
+      <div class="full-width">
+        <div class="container-title">Get in touch</div>
+        <div class="centered-text">Do you like your cornflakes crispy or do you like them soft?</div>
+        <div class="contact-links">
+            <a class="contact-button" id="profile-link" href="tel:" target="_blank"><i class="fas fa-mobile-alt"></i> Call</a>
+            <a class="contact-button" id="profile-link" href="mailto:" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+            <a class="contact-button" href="https://github.com/"><i class="fab fa-github icon"></i> Github</a>
+            <a class="contact-button" href="https://www.linkedin.com/"><i class="fab fa-linkedin icon"></i> LinkedIn</a>
+            <a class="contact-button" href="https://www.twitter.com/"><i class="fab fa-twitter icon"></i> Twitter</a>
+        </div>
+      </div>
+    </div>
+
   </body>
   <footer>
-    <div class="footer-column">freeCodeCamp Personal Portfolio</div>
+    <div class="footer-column">freeCodeCamp Portfolio ☘</div>
     <div class="footer-column">© 2023 All rights reserved</div>
   </footer>
 </html>
