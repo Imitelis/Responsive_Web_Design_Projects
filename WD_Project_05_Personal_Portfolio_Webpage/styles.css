@@ -298,11 +298,15 @@ footer {
   }
 
   #welcome-section {
-    height: 150vh;
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
   }
 
   .projects-title {
-    height: 50vh;
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
   
   .project-preview {
@@ -340,11 +344,12 @@ footer {
   
   footer {
     flex-direction: column;
-    max-height: 30vh;
+    height: auto;
+    padding-bottom: 60vh;
   }
   
   .footer-column {
     max-width: none;
-    padding-bottom: 15px;
+    padding-bottom: 10vh;
   }
 }
